@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>chart4</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- 引入 ECharts 文件 -->
+    <script src="static/assets/js/echarts.min.js"></script>
+    <script src="static/assets/js/china.js"></script>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ======= 评分图展示 ======= -->
+<section id="team" class="team">
+    <div class="container-fluid">
+        <div class="section-title">
+            <h2>国家公务员考试数据可视化图表——竞争最激烈的岗位对比</h2>
+        </div>
+
+        <!-- ======= 预览板块 ======= -->
+        <section class="counts section-bg" style="margin-left: 100px;margin-right: 100px">
+            <div class="row">
+                <table class="table table-bordered table-striped table-hover col-lg-5"
+                       style="margin-right: 50px;margin-left: 100px">
+                    <thead>
+                    <tr>
+                        <th>部门名称</th>
+                        <th>用人司局</th>
+                        <th>职位名称</th>
+                        <th>竞争比</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                        <td>中国银行保险监督管理委员会北京监管局</td>
+                        <td>北京银保监局</td>
+                        <td>监管部门一级主任科员及以下</td>
+                        <td>5302:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>内蒙古自治区森林消防总队</td>
+                        <td>内蒙古森林消防总队所属森林消防支队</td>
+                        <td>内蒙古自治区森林消防总队所属支队管理指挥岗位</td>
+                        <td>5199.93:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>外交部</td>
+                        <td>地区业务司</td>
+                        <td>英语一</td>
+                        <td>5000:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>黑龙江省森林消防总队</td>
+                        <td>黑龙江森林消防总队所属森林消防支队（含直升机支队）</td>
+                        <td>黑龙江省森林消防总队所属支队管理指挥岗位</td>
+                        <td>4332.32:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>首都机场公安局</td>
+                        <td>首都机场公安局</td>
+                        <td>北京大兴国际机场公共区派出所一级警长及以下</td>
+                        <td>4211:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>中国证券监督管理委员会江苏监管局</td>
+                        <td>中国证券监督管理委员会江苏监管局</td>
+                        <td>辖区会计类岗位一级主任科员及以下</td>
+                        <td>4177:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>内蒙古自治区消防救援总队</td>
+                        <td>内蒙古消防救援总队所属消防救援支队</td>
+                        <td>内蒙古自治区消防救援总队所属支队管理指挥岗位</td>
+                        <td>4000.74:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>新疆维吾尔自治区消防救援总队</td>
+                        <td>新疆消防救援总队所属消防救援支队</td>
+                        <td>新疆维吾尔自治区消防救援总队所属支队管理指挥岗位</td>
+                        <td>2666:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>云南省消防救援总队</td>
+                        <td>云南省消防救援总队所属消防救援支队</td>
+                        <td>云南省消防救援总队所属支队基层指挥员</td>
+                        <td>2644:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>国家税务总局广东省税务局</td>
+                        <td>国家税务总局广州市天河区税务局</td>
+                        <td>一级行政执法员（十七）</td>
+                        <td>1889:1</td>
+                    </tr>
+                    </tbody>
+                </table>
+                <table class="table table-bordered table-striped table-hover col-lg-5">
+                    <thead>
+                    <tr>
+                        <th>部门名称</th>
+                        <th>用人司局</th>
+                        <th>职位名称</th>
+                        <th>竞争比</th>
+                    </tr>
+                    </thead>
+                    <tbody>
+                    <tr class="">
+                        <td>国家税务总局青海省税务局</td>
+                        <td>国家税务总局曲麻莱县税务局</td>
+                        <td>一级行政执法员（三）</td>
+                        <td>6002:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>广东海事局</td>
+                        <td>广州海事局</td>
+                        <td>广州海事局一级行政执法员（二十九）</td>
+                        <td>4193:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>国家统计局广东调查总队</td>
+                        <td>国家统计局广东调查总队</td>
+                        <td>国家统计局珠海调查队业务科室一级科员</td>
+                        <td>2746:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>中央办公厅</td>
+                        <td>中共中央直属机关事务管理局</td>
+                        <td>绿化管理工作一级主任科员及以下</td>
+                        <td>2716:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>国家税务总局江苏省税务局</td>
+                        <td>国家税务总局扬州高新技术产业开发区税务局</td>
+                        <td>一级行政执法员</td>
+                        <td>2638:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>全国人大</td>
+                        <td>机关采购中心</td>
+                        <td>业务一处一级主任科员及以下</td>
+                        <td>2616:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>广东海事局</td>
+                        <td>潮州海事局</td>
+                        <td>潮州海事局一级行政执法员（二）</td>
+                        <td>2512:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>国家统计局广东调查总队</td>
+                        <td>国家统计局广东调查总队</td>
+                        <td>国家统计局湛江调查队办公室一级科员</td>
+                        <td>2251:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>国家税务总局深圳市税务局</td>
+                        <td>国家税务总局深圳市罗湖区税务局</td>
+                        <td>一级行政执法员（三）</td>
+                        <td>2109.5:1</td>
+                    </tr>
+                    <tr class="">
+                        <td>生态环境部西北核与辐射安全监督站</td>
+                        <td>生态环境部西北核与辐射安全监督站</td>
+                        <td>核与辐射安全监督岗位一级主任科员及以下</td>
+                        <td>1965:1</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section><!-- End Counts Section -->
+    </div>
+</section><!-- 结束 首页 -->
+
+
+<!-- Vendor JS Files -->
+<script src="static/assets/vendor/jquery/jquery.min.js"></script>
+<script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<!--  <script src="static/assets/vendor/php-email-form/validate.js"></script>-->
+<script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+<script src="static/assets/vendor/venobox/venobox.min.js"></script>
+<script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="static/assets/vendor/counterup/counterup.min.js"></script>
+<script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="static/assets/vendor/aos/aos.js"></script>
+
+<!-- Template Main JS File -->
+<script src="static/assets/js/main.js"></script>
+
+<script type="text/javascript">
+
+</script>
+</body>
+
+</html>

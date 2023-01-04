@@ -1,0 +1,86 @@
+{
+  "id": "3847960",
+  "name": "gongwuyuan",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "925649",
+      "name": "统计图表",
+      "font_class": "tongjitubiao",
+      "unicode": "e67a",
+      "unicode_decimal": 59002
+    },
+    {
+      "icon_id": "2678639",
+      "name": "统计",
+      "font_class": "tongji",
+      "unicode": "e660",
+      "unicode_decimal": 58976
+    },
+    {
+      "icon_id": "4399999",
+      "name": "统计",
+      "font_class": "tongji1",
+      "unicode": "e64a",
+      "unicode_decimal": 58954
+    },
+    {
+      "icon_id": "18166404",
+      "name": "折线图,统计图",
+      "font_class": "chart-trend",
+      "unicode": "e8bf",
+      "unicode_decimal": 59583
+    },
+    {
+      "icon_id": "18166405",
+      "name": "折线图,统计图",
+      "font_class": "chart-trend-full",
+      "unicode": "e8c1",
+      "unicode_decimal": 59585
+    },
+    {
+      "icon_id": "8559550",
+      "name": "饼图",
+      "font_class": "bingtu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "1099498",
+      "name": "data",
+      "font_class": "data",
+      "unicode": "e757",
+      "unicode_decimal": 59223
+    },
+    {
+      "icon_id": "2057530",
+      "name": "datav-data",
+      "font_class": "datav-data",
+      "unicode": "e722",
+      "unicode_decimal": 59170
+    },
+    {
+      "icon_id": "4354248",
+      "name": "图表-折线图",
+      "font_class": "tubiao-zhexiantu",
+      "unicode": "eb96",
+      "unicode_decimal": 60310
+    },
+    {
+      "icon_id": "8860628",
+      "name": "data",
+      "font_class": "data1",
+      "unicode": "e602",
+      "unicode_decimal": 58882
+    },
+    {
+      "icon_id": "18166409",
+      "name": "折线图,统计图",
+      "font_class": "chart-line",
+      "unicode": "e8c0",
+      "unicode_decimal": 59584
+    }
+  ]
+}

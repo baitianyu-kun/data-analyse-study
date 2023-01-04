@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>chart6</title>
+    <meta content="" name="descriptison">
+    <meta content="" name="keywords">
+
+    <!-- 引入 ECharts 文件 -->
+    <script src="static/assets/js/echarts.min.js"></script>
+    <script src="static/assets/js/china.js"></script>
+
+    <!-- Favicons -->
+    <link href="assets/img/favicon.png" rel="icon">
+    <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i,900"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+    <link href="static/assets/vendor/venobox/venobox.css" rel="stylesheet">
+    <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+
+    <!-- Template Main CSS File -->
+    <link href="static/assets/css/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+
+<!-- ======= 评分图展示 ======= -->
+<section id="team" class="team">
+    <div class="container-fluid">
+        <div class="section-title">
+            <h2>国家公务员考试数据可视化图表1</h2>
+        </div>
+
+        <!-- ======= 预览板块 ======= -->
+        <section class="counts section-bg" style="margin-left: 100px;margin-right: 100px">
+            <div class="row">
+                <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
+                <div id="bar" style="width:100%;height:600px;" class="col-6"></div>
+                <div id="bar1" style="width:100%;height:600px;" class="col-6"></div>
+            </div>
+        </section><!-- End Counts Section -->
+    </div>
+</section><!-- 结束 首页 -->
+
+
+<!-- Vendor JS Files -->
+<script src="static/assets/vendor/jquery/jquery.min.js"></script>
+<script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="static/assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+<!--  <script src="static/assets/vendor/php-email-form/validate.js"></script>-->
+<script src="static/assets/vendor/jquery-sticky/jquery.sticky.js"></script>
+<script src="static/assets/vendor/venobox/venobox.min.js"></script>
+<script src="static/assets/vendor/waypoints/jquery.waypoints.min.js"></script>
+<script src="static/assets/vendor/counterup/counterup.min.js"></script>
+<script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="static/assets/vendor/aos/aos.js"></script>
+
+<!-- Template Main JS File -->
+<script src="static/assets/js/main.js"></script>
+
+<script type="text/javascript">
+    $(
+        function () {
+            var chart = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:5000/barChart",
+                dataType: 'json',
+                success: function (result) {
+                    chart.setOption(result);
+                }
+            });
+        }
+    )
+    $(
+        function () {
+            var chart = echarts.init(document.getElementById('bar1'), 'white', {renderer: 'canvas'});
+            $.ajax({
+                type: "GET",
+                url: "http://127.0.0.1:5000/barChart",
+                dataType: 'json',
+                success: function (result) {
+                    chart.setOption(result);
+                }
+            });
+        }
+    )
+</script>
+</body>
+
+</html>
