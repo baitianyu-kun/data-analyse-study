@@ -21,6 +21,21 @@ def bumenshu_data(df_path):
     return sorted_result_shaixuan
 
 
+def radar_data(df_path):
+    df = pd.read_csv(df_path)
+    bumenshu = df.groupby('部门名称')
+    bumenshu = len(bumenshu.groups)
+    zhiweishu = len(df)
+    renshu = df.agg({'报考人数': sum, '招考人数': sum, '过审人数': sum, '访问人数': sum})
+    result = []
+    result.append(bumenshu)
+    result.append(zhiweishu)
+    result.extend(renshu)
+    # 部门数、职位数、报考人数、招考人数、过审人数、访问人数
+    # [404, 9948, 1361961, 24400, 1244049, 1497479]
+    return [result]
+
+
 def baokaoshu_data(df_path):
     df = pd.read_csv(df_path)
     df1 = df.groupby('地区').agg({'报考人数': sum, '招考人数': sum, '过审人数': sum, '访问人数': sum})
@@ -69,4 +84,5 @@ if __name__ == '__main__':
     #                  'D:\\PycharmProjects\\keshe2\\data\\jingzhengbi23.csv')
     # jingzhengbi_data('D:\\PycharmProjects\\keshe2\\data\\2022repack.csv',
     #                  'D:\\PycharmProjects\\keshe2\\data\\jingzhengbi22.csv')
-    hengzhifang_data('D:\\PycharmProjects\\keshe2\\data\\bumen23.csv')
+    # hengzhifang_data('D:\\PycharmProjects\\keshe2\\data\\bumen23.csv')
+    radar_data('D:\\PycharmProjects\\keshe2\\data\\2023repack.csv')

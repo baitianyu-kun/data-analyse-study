@@ -9,7 +9,7 @@ import codecs
 from pyecharts.faker import Faker
 
 from data.data_func import *
-from pyecharts.charts import Bar, ThemeRiver, Pie, Map
+from pyecharts.charts import Bar, ThemeRiver, Pie, Map, Radar
 
 web = Flask(__name__)
 
@@ -134,6 +134,48 @@ def hengzhifang_reversebar(filepath):
     return c
 
 
+def radar_chart():
+    # 部门数、职位数、报考人数、招考人数、过审人数、访问人数
+    # [404, 9948, 1361961, 24400, 1244049, 1497479]
+    # [528, 10000, 2280674, 19562, 2041739, 1257816]
+    data22 = radar_data('D:\\PycharmProjects\\keshe2\\data\\2022repack.csv')
+    data23 = radar_data('D:\\PycharmProjects\\keshe2\\data\\2023repack.csv')
+    c = (
+        Radar()
+        .add_schema(
+            schema=[
+                opts.RadarIndicatorItem(name="部门数", max_=800),
+                opts.RadarIndicatorItem(name="职位数", max_=15000),
+                opts.RadarIndicatorItem(name="报考人数", max_=2500000),
+                opts.RadarIndicatorItem(name="招考人数", max_=40000),
+                opts.RadarIndicatorItem(name="过审人数", max_=2500000),
+                opts.RadarIndicatorItem(name="访问人数", max_=2500000),
+            ],
+            splitarea_opt=opts.SplitAreaOpts(
+                is_show=True, areastyle_opts=opts.AreaStyleOpts(opacity=1)
+            ),
+            textstyle_opts=opts.TextStyleOpts(color="#000"),
+        )
+        .add(
+            series_name="2022数据相关属性",
+            data=data22,
+            linestyle_opts=opts.LineStyleOpts(color="#3fb1e3",width=3),
+
+        )
+        .add(
+            series_name="2023数据相关属性",
+            data=data23,
+            linestyle_opts=opts.LineStyleOpts(color="#6be6c1",width=3)
+        )
+        .set_colors(["#3fb1e3", "#6be6c1", "#626c91", "#a0a7e6", "#c4ebad", "#96dee8"])
+        .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
+        .set_global_opts(
+            legend_opts=opts.LegendOpts()
+        )
+    )
+    return c
+
+
 @web.route("/zhiweishu")
 def zhiweishu():
     c = zhiweishu_bar()
@@ -170,22 +212,6 @@ def baokaoshu23():
     return c.dump_options_with_quotes()
 
 
-def hengzhifangdata():
-    c = (
-        Bar()
-        .add_xaxis(Faker.choose())
-        .add_yaxis("商家A", Faker.values(), stack="stack1")
-        .add_yaxis("商家B", Faker.values(), stack="stack1")
-        .add_yaxis("商家C", Faker.values(), stack="stack1")
-        .reversal_axis()
-        .set_series_opts(label_opts=opts.LabelOpts(is_show=False))
-        .set_global_opts(title_opts=opts.TitleOpts(title="Bar-堆叠数据（部分）"))
-    )
-    print(Faker.choose())
-    print(Faker.values())
-    return c
-
-
 @web.route("/hengzhifang/22")
 def hengzhifang22():
     c = hengzhifang_reversebar('D:\\PycharmProjects\\keshe2\\data\\bumen22.csv')
@@ -195,6 +221,12 @@ def hengzhifang22():
 @web.route("/hengzhifang/23")
 def hengzhifang23():
     c = hengzhifang_reversebar('D:\\PycharmProjects\\keshe2\\data\\bumen23.csv')
+    return c.dump_options_with_quotes()
+
+
+@web.route("/radar")
+def radar():
+    c = radar_chart()
     return c.dump_options_with_quotes()
 
 

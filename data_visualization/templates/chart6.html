@@ -41,16 +41,12 @@
 <section id="team" class="team">
     <div class="container-fluid">
         <div class="section-title">
-            <h2>国家公务员考试数据可视化图表1</h2>
+            <h2>国家公务员考试数据可视化图表——考试数据相关属性对比</h2>
         </div>
 
         <!-- ======= 预览板块 ======= -->
         <section class="counts section-bg" style="margin-left: 100px;margin-right: 100px">
-            <div class="row">
-                <!-- 为 ECharts 准备一个具备大小（宽高）的 DOM -->
-                <div id="bar" style="width:100%;height:600px;" class="col-6"></div>
-                <div id="bar1" style="width:100%;height:600px;" class="col-6"></div>
-            </div>
+                <div id="bar" style="width:100%;height:600px;"></div>
         </section><!-- End Counts Section -->
     </div>
 </section><!-- 结束 首页 -->
@@ -77,20 +73,7 @@
             var chart = echarts.init(document.getElementById('bar'), 'white', {renderer: 'canvas'});
             $.ajax({
                 type: "GET",
-                url: "http://127.0.0.1:5000/barChart",
-                dataType: 'json',
-                success: function (result) {
-                    chart.setOption(result);
-                }
-            });
-        }
-    )
-    $(
-        function () {
-            var chart = echarts.init(document.getElementById('bar1'), 'white', {renderer: 'canvas'});
-            $.ajax({
-                type: "GET",
-                url: "http://127.0.0.1:5000/barChart",
+                url: "http://127.0.0.1:5000/radar",
                 dataType: 'json',
                 success: function (result) {
                     chart.setOption(result);
