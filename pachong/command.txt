@@ -1,1 +1,5 @@
+cd C:\Program Files\Google\Chrome\Application
 chrome.exe --remote-debugging-port=9222 --user-data-dir=D://chromenewdata
+
+http://zw.offcn.com/gj/zwph/2023_jzb_qb_qb_qb_desc_1.html
+http://zw.offcn.com/gj/zwph/2022_zkrs_qb_qb_qb_desc.html

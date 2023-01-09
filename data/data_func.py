@@ -80,9 +80,5 @@ def hengzhifang_data(df_path):
 
 
 if __name__ == '__main__':
-    # jingzhengbi_data('D:\\PycharmProjects\\keshe2\\data\\2023repack.csv',
-    #                  'D:\\PycharmProjects\\keshe2\\data\\jingzhengbi23.csv')
-    # jingzhengbi_data('D:\\PycharmProjects\\keshe2\\data\\2022repack.csv',
-    #                  'D:\\PycharmProjects\\keshe2\\data\\jingzhengbi22.csv')
     # hengzhifang_data('D:\\PycharmProjects\\keshe2\\data\\bumen23.csv')
     radar_data('D:\\PycharmProjects\\keshe2\\data\\2023repack.csv')
